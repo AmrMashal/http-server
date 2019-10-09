@@ -4,6 +4,16 @@ provider "aws" {
   profile    = "default"
 }
 
+terraform {
+ backend "s3" {
+ encrypt = true
+ bucket = "terraform5748585845"
+ dynamodb_table = "terraform-state-lock-dynamo"
+ region = "us-east-1"
+ key = "apache-server/"
+ }
+}
+
 # resource "aws_instance" "ec2_instance" {
 #   count                     = "${var.count}"
 #   //name                      = "instance_${var.Name}_${var.count}"
