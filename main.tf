@@ -27,12 +27,3 @@ resource "aws_instance" "jenkins_server_amr" {
       Name = "example_tf"
     }
 }
-
-resource "aws_eip" "first_amr_ip" {
-    vpc = true
-    instance = "aws_instance.jenkins_server_amr.id"
-}
-
-output "first_amr_ip" {
-  value = aws_eip.first_amr_ip.public_ip
-}
