@@ -21,5 +21,4 @@
 
 #! /bin/bash
 
-mkdir testing123
-touch helloamr
+echo "<h1>Hello Amr, does this work?</h1>" | sudo tee /home/ubuntu
