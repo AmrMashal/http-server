@@ -18,7 +18,6 @@
 # sudo ufw allow 8080
 # sudo apt install awscli -y
 
-
 #! /bin/bash
 
-echo "<h1>Hello Amr, does this work?</h1>" | sudo tee /home/ubuntu
+echo "<h1>Hello Amr, does this work?</h1>" | sudo tee /home/ubuntu/testamr.html
