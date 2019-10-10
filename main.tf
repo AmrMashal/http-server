@@ -14,15 +14,6 @@ terraform {
  }
 }
 
-# resource "aws_instance" "ec2_instance" {
-#   count                     = "${var.count}"
-#   //name                      = "instance_${var.Name}_${var.count}"
-#   ami                       = "${var.ami}"
-#   instance_type             = "${var.instance_type}"
-#   key_name                  = "${var.key_name}"
-#   vpc_security_group_ids    = ["${var.vpc_security_group_ids}",]
-#   subnet_id                 = "${var.subnet_id}"
-
 resource "aws_instance" "jenkins_server_amr" {
   ami           = "ami-06358f49b5839867c"
   instance_type = "t2.micro"
